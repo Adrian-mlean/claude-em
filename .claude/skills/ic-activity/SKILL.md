@@ -2,7 +2,7 @@
 name: ic-activity
 description: >
   Use this skill whenever the user wants to analyze the activity of an IC or engineer.
-  You have access to a CLI tool that retrieves activity data for an IC from Jira and GitHub.
+  You have access to a CLI tool that retrieves activity data for an IC from Jira and GitLab.
 
 ---
 
@@ -11,15 +11,15 @@ description: >
 Run this script using the Bash tool:
 
 ```
-bash .claude/skills/ic-activity/scripts/run_ic_activity.sh <github_username> <jira_email> <from_date> <to_date>
+bash .claude/skills/ic-activity/scripts/run_ic_activity.sh <gitlab_username> <jira_email> <from_date> <to_date>
 ```
 
-- `github_username`: the user's GitHub handle (e.g. `jcesarperez-mews`)
-- `jira_email`: the user's Jira email (e.g. `julio.perez@mews.com`)
+- `gitlab_username`: the user's GitLab handle (e.g. `jcesarperez`)
+- `jira_email`: the user's Jira email (e.g. `julio.perez@m-lean.com`)
 - `from_date`: start date in `YYYY-MM-DD` format (e.g. `2026-02-01`)
 - `to_date`: end date in `YYYY-MM-DD` format (e.g. `2026-02-28`)
 
-To resolve `github_username` and `jira_email` for a team member, check `data/team_*.csv` files first.
+To resolve `gitlab_username` and `jira_email` for a team member, check `data/team_*.csv` files first.
 
 **Date resolution** — convert user expressions to `from_date` and `to_date` before calling the script:
 - "last 14 days" → FROM = today - 14 days, TO = today

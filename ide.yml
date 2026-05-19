@@ -1,0 +1,13 @@
+name: engineering-manager
+
+# before: npm install  # optional pre-launch hook
+
+rows:
+  - size: 100%
+    panes:
+      - title: Claude 1
+        command: claude
+        size: 70%
+      - title: Shell
+        size: 30%
+
