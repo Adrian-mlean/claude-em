@@ -1,13 +1,15 @@
 name: engineering-manager
 
-# before: npm install  # optional pre-launch hook
-
 rows:
-  - size: 100%
+  - size: 70%
+    direction: column # <- Esto fuerza a que Claude 1 y Claude 2 se dividan verticalmente (lado a lado)
     panes:
       - title: Claude 1
-        command: claude
-        size: 70%
+        command: claude --dangerously-skip-permissions
+        size: 50%
       - title: Shell
-        size: 30%
-
+        size: 50%
+  - size: 30%
+    panes:
+      - title: Claude 2
+        command: claude --dangerously-skip-permissions
